@@ -1,0 +1,1 @@
+function e(e,{query:t=``,maxPrice:n=1/0,sort:r=`Recommended`}={}){let i=t.trim().toLowerCase();return e.filter(e=>`${e.city} ${e.name}`.toLowerCase().includes(i)&&e.price<=n).sort((e,t)=>r===`Price: low to high`?e.price-t.price:r===`Top rated`?t.rating-e.rating:0)}function t(e){return e.reduce((e,t)=>e+Number(t.amount),0)}export{e as n,t};
